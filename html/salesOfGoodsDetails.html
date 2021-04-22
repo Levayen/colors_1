@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/jqueryV172.js"></script>
     <script src="../js/swiper.min.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/element.js"></script>
     <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <title>首页</title>
+    <link rel="stylesheet" href="../css/salesOfGoodsDetais.css">
+    <link rel="stylesheet" href="../css/element.css">
+    <title>商品详情-卖出</title>
 </head>
 <body>
     <div class="centent">
@@ -60,251 +63,166 @@
                 <ul>
                     <li><img src="../img/icon_004.png" alt=""></li>
                     <li>首页 > </li>
-                    <li>预售大厅 </li>
+                    <li>预售大厅 > </li>
+                    <li>商品详情 </li>
                 </ul>
             </div>
-            <div class="banner_box swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="../img/banner_001.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../img/banner_001.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../img/banner_001.png" alt="">
-                    </div>
+            <div class="goods_info global_shadow">
+                <div class="goods_info_top">
+                    <div>商品名称</div>
+                    <div>关注</div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="goods_desc">
+                    <div>包装: 中性包装</div>
+                    <div>包装规格: 25KG/箱</div>
+                    <div>可供量: 1000KG</div>
+                    <div>交割期: 2021-04-22</div>
+                    <div class="goods_desc_price">成交含税价: 
+                        <span>￥28/KG <i><img src="../img/up2.png" alt=""></i></span>
+                        <span>周涨幅</span>
+                    </div>
+                    <div>定金占比: 20%</div>
+                    <div>供货商: 上海市</div>
+                    <div>货源地: 上海市</div>
+                </div>
+                <div class="goods_info_bottom">
+                    <div class="active">立即下单</div>
+                    <div>我要求购</div>
+                </div>
             </div>
-            <div class="tabs_box_1">
-                <div class="tabs_1 active">预售大厅</div>
-                <div class="tabs_2">我的钱包</div>
+            <div class="charts_box global_shadow">
+                <div class="charts_title">
+                    <img src="../img/icon_007.png" alt="">
+                    <div>价格波动</div>
+                </div>
+                <div>
+                    <div id="main" style="width: 1200px;height:320px;"></div>
+                </div>
             </div>
-            <!-- 预售大厅 -->
-            <div class="sales_hall">
-                <div class="shop_nav">
-                    <div>预售商品</div>
-                    <div class="sort">
-                        <div>
-                            <div>综合</div>
-                            <div>
-                                <img src="../img/sort-up.png" alt="">
-                                <img style="display: none;" src="../img/sort-down.png" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <div>可供销量</div>
-                            <div>
-                                <img src="../img/sort-up.png" alt="">
-                                <img style="display: none;" src="../img/sort-down.png" alt="">
-                            </div>
-                        </div>
-                        <div>
-                            <div>销售量</div>
-                            <div>
-                                <img src="../img/sort-up.png" alt="">
-                                <img style="display: none;" src="../img/sort-down.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+            <div class="sales_record global_shadow">
+                <div class="sales_record_top">
+                    <div class="active">卖出</div>
+                    <div>求购</div>
                 </div>
-                <div class="list_box">
-                    <div class="list_item active">
-                        <div class="shop_name">商品名c</div>
-                        <div class="shop_attr">
-                            <div>
-                                <div>生产厂家：红火火恍恍惚惚</div>
-                                <div>可供量：10000KG</div>
-                            </div>
-                            <div>
-                                <div>包装：五</div>
-                                <div>货源地：上海</div>
-                                <div>最新成交含税价：<span class="price">￥28/KG</span></div>
-                            </div>
-                        </div>
-                        <div class="shop_operation">
-                            <div class="btn">查看更多</div>
-                        </div>
+                <div class="table" style="display: none;">
+                    <div class="table_header_1">
+                        <div>会员</div>
+                        <div>求购价(元/KG)</div>
+                        <div>求够订单量KG</div>
+                        <div>支付方式</div>
+                        <div>定金</div>
+                        <div>发布时间</div>
                     </div>
-                    <div class="list_item">
-                        <div class="shop_name">商品名c</div>
-                        <div class="shop_attr">
+                    <ul>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>现金</div>
+                            <div>现金</div>
+                            <div>2021-04-22</div>
                             <div>
-                                <div>生产厂家：红火火恍恍惚惚</div>
-                                <div>可供量：10000KG</div>
+                                <div class="btn">我要购买</div>
                             </div>
+                        </li>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>现金</div>
+                            <div>现金</div>
+                            <div>2021-04-22</div>
                             <div>
-                                <div>包装：五</div>
-                                <div>货源地：上海</div>
-                                <div>最新成交含税价：<span class="price">￥28/KG</span></div>
+                                <div class="btn">我要购买</div>
                             </div>
-                        </div>
-                        <div class="shop_operation">
-                            <div class="btn">查看更多</div>
-                        </div>
-                    </div>
-                    <div class="list_item">
-                        <div class="shop_name">商品名c</div>
-                        <div class="shop_attr">
+                        </li>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>现金</div>
+                            <div>现金</div>
+                            <div>2021-04-22</div>
                             <div>
-                                <div>生产厂家：红火火恍恍惚惚</div>
-                                <div>可供量：10000KG</div>
+                                <div class="btn">我要购买</div>
                             </div>
+                        </li>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>现金</div>
+                            <div>现金</div>
+                            <div>2021-04-22</div>
                             <div>
-                                <div>包装：五</div>
-                                <div>货源地：上海</div>
-                                <div>最新成交含税价：<span class="price">￥28/KG</span></div>
+                                <div class="btn">我要购买</div>
                             </div>
-                        </div>
-                        <div class="shop_operation">
-                            <div class="btn">查看更多</div>
-                        </div>
-                    </div>
-                    <div class="show_more">查看更多</div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="title_bar">
-                    <div>
-                        <img src="../img/icon_005.png" alt=""> 公告
-                    </div>
-                    <div>查看更多公告 ></div>
+                <el-button>11111</el-button>
+            </div>
+            <div class="sales_record global_shadow">
+                <div class="sales_record_top">
+                    <div class="active">卖出</div>
+                    <div>求购</div>
                 </div>
-                <div class="notice_list">
-                    <div>
-                        <div class="list_header">
-                            <div>置顶公告</div>
-                            <div class="show_more_notice">查看更多 >></div>
-                        </div>
-                        <ul>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                        </ul>
+                <div class="table" style="display: none;">
+                    <div class="table_header">
+                        <div>会员</div>
+                        <div>卖出价(元/KG)</div>
+                        <div>订单量KG</div>
+                        <div>发布时间</div>
                     </div>
-                    <div>
-                        <div class="list_header">
-                            <div>最新公告</div>
-                            <div class="show_more_notice">查看更多 >></div>
-                        </div>
-                        <ul>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                            <li class="notice_item">
-                                <div>
-                                    <span>[最新预售]</span>
-                                    <span>红红火火恍恍惚惚h</span>
-                                </div>
-                                <div>2021-04-22</div>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>2021-04-22</div>
+                            <div>
+                                <div class="btn">我要购买</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>2021-04-22</div>
+                            <div>
+                                <div class="btn">我要购买</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>2021-04-22</div>
+                            <div>
+                                <div class="btn">我要购买</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>2021-04-22</div>
+                            <div>
+                                <div class="btn">我要购买</div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="title_bar">
-                    <div>
-                        <img src="../img/icon_006.png" alt=""> 友情链接
-                    </div>
-                    <div>查看全部 ></div>
+                <el-button>11111</el-button>
+            </div>
+            <div class="goods_details global_shadow">
+                <div class="details_title">
+                    <img src="../img/icon_008.png" alt="">
+                    <div>商品详情</div>
                 </div>
-                <div class="link_list">
-                    <div>
-                        <span>[ 行业协会 ]</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                    </div>
-                    <div>
-                        <span>[ 政府相关 ]</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                    </div>
-                    <div>
-                        <span>[ 大学学院 ]</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                        <span>中国纺织工业联合会</span>
-                    </div>
+                <div class="details_desc">
+                    <p>资质证明</p> 
+                    <img src="../img/img_005.png" alt="">
                 </div>
             </div>
         </div>
@@ -477,42 +395,38 @@
     </div>
     <script>
         $(function(){
-            var mySwiper = new Swiper('.swiper-container', {
-                autoplay: true,//可选选项，自动滑动
-                loop : true,
-                speed:1000,
-                pagination: {
-                    el: '.swiper-pagination',
-                    bulletClass : 'my-bullet',//需设置.my-bullet样式
-                    bulletActiveClass: 'my-bullet-active',
-                    clickable :true,
+            let myChart = echarts.init(document.getElementById('main'));
+            let timeData = ['4.22','4.23','4.24','4.25','4.26','4.27','4.28'];
+            let priceData = [150, 230, 224, 218, 135, 147, 260];
+            let option = {
+                tooltip: {
+                    trigger: 'axis'
                 },
-            });
-            //此方法为模拟的，hover到分页器的小圆点后自动触发其本身的click事件
-            $(".my-bullet").hover(function() {
-                $(this).click(); //鼠标划上去之后，自动触发点击事件来模仿鼠标划上去的事件
-            },function() {
-                mySwiper.autoplay.start(); //鼠标移出之后，自动轮播开启
-            })
-
-            $('.tabs_1').click(function(e){
-                $('.tabs_2').removeClass('active');
-                $(this).addClass('active');
-            })
-            $('.tabs_2').click(function(e){
-                $('.tabs_1').removeClass('active');
-                $(this).addClass('active');
-            })
-            $(".show_more_notice").click(function(){
-                $(".mask").show()
-            })
-            $(".closer_mask").click(function(){
-                $(".mask").hide()
-            })
-            $(".list_item").click(function(e){
-                $(this).addClass("active");  
-                $(this).siblings().removeClass("active");
-            })
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    boundaryGap: false,
+                    type: 'category',
+                    data: timeData
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                    data: priceData,
+                    type: 'line'
+                }]
+            };
+            option && myChart.setOption(option);
+            // myChart.dispatchAction({
+            //     type: 'showTip',
+            //     seriesIndex:0,  // 显示第几个series
+            //     dataIndex: myData.length - 1 // 显示第几个数据
+            // });
         })
     </script>
 </body>
