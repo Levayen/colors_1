@@ -7,11 +7,10 @@
     <script src="../js/jqueryV172.js"></script>
     <script src="../js/swiper.min.js"></script>
     <script src="../js/echarts.min.js"></script>
-    <script src="../js/element.js"></script>
+    <script src="../js/pager.js"></script>
     <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/salesOfGoodsDetais.css">
-    <link rel="stylesheet" href="../css/element.css">
     <title>商品详情-卖出</title>
 </head>
 <body>
@@ -101,10 +100,59 @@
             </div>
             <div class="sales_record global_shadow">
                 <div class="sales_record_top">
-                    <div class="active">卖出</div>
-                    <div>求购</div>
+                    <div class="sales_btn active">卖出</div>
+                    <div class="buy_btn">求购</div>
                 </div>
-                <div class="table" style="display: none;">
+                <div class="table" >
+                    <div class="table_header">
+                        <div>会员</div>
+                        <div>卖出价(元/KG)</div>
+                        <div>订单量KG</div>
+                        <div>发布时间</div>
+                        <div> <!--占位-->
+                            <div></div>     
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>2021-04-22</div>
+                            <div>
+                                <div class="btn">我要购买</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>2021-04-22</div>
+                            <div>
+                                <div class="btn">我要购买</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>2021-04-22</div>
+                            <div>
+                                <div class="btn">我要购买</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>绍兴*****</div>
+                            <div class="price">28.88</div>
+                            <div>10000</div>
+                            <div>2021-04-22</div>
+                            <div>
+                                <div class="btn">我要购买</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="table_1" style="display: none;">
                     <div class="table_header_1">
                         <div>会员</div>
                         <div>求购价(元/KG)</div>
@@ -112,6 +160,9 @@
                         <div>支付方式</div>
                         <div>定金</div>
                         <div>发布时间</div>
+                        <div> <!--占位-->
+                            <div></div>     
+                        </div>
                     </div>
                     <ul>
                         <li>
@@ -158,62 +209,18 @@
                                 <div class="btn">我要购买</div>
                             </div>
                         </li>
+                        
                     </ul>
                 </div>
-                <el-button>11111</el-button>
-            </div>
-            <div class="sales_record global_shadow">
-                <div class="sales_record_top">
-                    <div class="active">卖出</div>
-                    <div>求购</div>
-                </div>
-                <div class="table" style="display: none;">
-                    <div class="table_header">
-                        <div>会员</div>
-                        <div>卖出价(元/KG)</div>
-                        <div>订单量KG</div>
-                        <div>发布时间</div>
+                <div class="sales_record_bottom">
+                    <div>共10086条</div>
+                    <div>
+                        <div id="pager"></div>
                     </div>
-                    <ul>
-                        <li>
-                            <div>绍兴*****</div>
-                            <div class="price">28.88</div>
-                            <div>10000</div>
-                            <div>2021-04-22</div>
-                            <div>
-                                <div class="btn">我要购买</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>绍兴*****</div>
-                            <div class="price">28.88</div>
-                            <div>10000</div>
-                            <div>2021-04-22</div>
-                            <div>
-                                <div class="btn">我要购买</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>绍兴*****</div>
-                            <div class="price">28.88</div>
-                            <div>10000</div>
-                            <div>2021-04-22</div>
-                            <div>
-                                <div class="btn">我要购买</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>绍兴*****</div>
-                            <div class="price">28.88</div>
-                            <div>10000</div>
-                            <div>2021-04-22</div>
-                            <div>
-                                <div class="btn">我要购买</div>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
-                <el-button>11111</el-button>
+                <div class="input">
+                    前往 <input type="number" min="1"> 页 <div class="btn">确定</div>
+                </div>
             </div>
             <div class="goods_details global_shadow">
                 <div class="details_title">
@@ -427,6 +434,30 @@
             //     seriesIndex:0,  // 显示第几个series
             //     dataIndex: myData.length - 1 // 显示第几个数据
             // });
+            $(".sales_btn").click(function(){
+                $(this).addClass("active");  
+                $(this).siblings().removeClass("active");
+                $('.table').show();
+                $('.table_1').hide();
+            })
+            $(".buy_btn").click(function(){
+                $(this).addClass("active");  
+                $(this).siblings().removeClass("active");
+                $('.table').hide();
+                $('.table_1').show();
+            })
+
+            //翻页器操作
+            function doChangePage(obj){
+                console.log(obj)
+            }
+            let pagerBox = document.getElementById('pager');
+            let pager = new Pager({
+            index: 1,
+            total: 15,
+            parent: pagerBox,
+            onchange: doChangePage
+            });
         })
     </script>
 </body>
