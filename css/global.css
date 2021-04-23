@@ -471,3 +471,8 @@ input::-webkit-inner-spin-button{
 .global_hand{
     cursor: pointer;
 }
+.layui-laypage-btn{
+    background-color: #f20114 !important;
+    color: #fff;
+    border-radius: 3px !important;
+}

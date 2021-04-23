@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/jqueryV172.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/orderDetails.css">
-    <title>商品详情-预售下单订单详情</title>
+    <link rel="stylesheet" href="../css/notice.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <title>公告</title>
 </head>
 <body>
-    <div class="center">
+    <div class="centent">
         <div class="page_top">
             <div>
                 <div>
@@ -59,128 +62,39 @@
                     <li><img src="../img/icon_004.png" alt=""></li>
                     <li>首页 > </li>
                     <li>预售大厅 > </li>
-                    <li>订单详情 </li>
+                    <li>公告 </li>
                 </ul>
             </div>
-            <div class="order_info global_box global_shadow">
-                <div class="title_bar_2">
-                    <div><img src="../img/icon_012.png" alt=""></div>
-                    <div>订单信息</div>
-                </div>
-                <div class="order_info_table">
-                    <ul>
-                        <li>
-                            <div>订单编号</div>
-                            <div>还是是的是的</div>
-                        </li>
-                        <li>
-                            <div>联系方式</div>
-                            <div>123456789</div>
-                        </li>
-                        <li>
-                            <div>商品名称</div>
-                            <div>还是是的是的</div>
-                        </li>
-                        <li>
-                            <div>成交价</div>
-                            <div class="red_bold">还是是的是的</div>
-                        </li>
-                        <li>
-                            <div>供货商</div>
-                            <div>还是是的是的</div>
-                        </li>
-                        <li>
-                            <div>支付方式</div>
-                            <div>还是是的是的</div>
-                        </li>
-                        <li>
-                            <div>定金占比</div>
-                            <div>20%</div>
-                        </li>
-                        <li>
-                            <div>订单量</div>
-                            <div>200KG</div>
-                        </li>
-                    </ul>
-                    <div>
-                        <div class="pay_btn">提前提货</div>
-                        <div class="refund_btn">申请退款</div>
+            <div class="banner_box swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../img/banner_001.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/banner_001.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/banner_001.png" alt="">
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="bill_info global_box global_shadow">
-                <div class="title_bar_2">
-                    <div><img src="../img/icon_012.png" alt=""></div>
-                    <div>开票信息</div>
-                </div>
-                <div class="bill_info_box">
-                    <div>
-                        <div>收款方:</div>
-                        <div class="bill_info_table">
-                            <ul>
-                                <li>
-                                    <div>账户户名</div>
-                                    <div>还是是的是的</div>
-                                </li>
-                                <li>
-                                    <div>银行卡号</div>
-                                    <div>还是是的是的</div>
-                                </li>
-                                <li>
-                                    <div>开户行</div>
-                                    <div>还是是的是的</div>
-                                </li>
-                                <li>
-                                    <div>金额</div>
-                                    <div>还是是的是的</div>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="notice_wrapper">
+                <div class="notice">
+                    <div class="top_notice">
+
                     </div>
-                    <div>
-                        <div>付款方:</div>
-                        <div class="bill_info_table">
-                            <ul>
-                                <li>
-                                    <div>账户户名</div>
-                                    <div>还是是的是的</div>
-                                </li>
-                                <li>
-                                    <div>银行卡号</div>
-                                    <div>还是是的是的</div>
-                                </li>
-                                <li>
-                                    <div>开户行</div>
-                                    <div>还是是的是的</div>
-                                </li>
-                                <li>
-                                    <div>金额</div>
-                                    <div>还是是的是的</div>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="all_notice">
+        
                     </div>
                 </div>
-            </div>
-            <div class="contract global_box global_shadow">
-                合同
-            </div>
-            <div class="money global_box global_shadow">
-                <div>
-                    <div>定金</div>
-                    <div>尾款</div>
-                    <div>服务费</div>
-                    <div>全款</div>
-                    <div>已付金额</div>
-                </div>
-                <div>
-                    <div>￥11000</div>
-                    <div>￥11000</div>
-                    <div>￥11000</div>
-                    <div>￥11000</div>
-                    <div>￥11000</div>
+                <div class="hot">
+
                 </div>
             </div>
+            <div id="test1">
+
+            </div>    
         </div>
         <div class="footer">
             <div class="footer_main">
@@ -263,8 +177,40 @@
             </div>
         </div>
     </div>
+    <script src="../layui/layui.js"></script>
     <script>
-
+        $(function(){
+            layui.use('laypage', function(){
+            var laypage = layui.laypage;
+            //执行一个laypage实例
+            laypage.render({
+                elem: 'test1' //注意，这里的 test1 是 ID，不用加 # 号
+                ,count: 500 //数据总数，从服务端得到
+                ,limit: 10
+                ,theme: '#f20114' //自定义选中色值
+                ,prev: '<'
+                ,next: '>'
+                ,layout: ['count', 'prev', 'page', 'next', 'skip']
+            });
+            });
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: true,//可选选项，自动滑动
+                loop : true,
+                speed:1000,
+                pagination: {
+                    el: '.swiper-pagination',
+                    bulletClass : 'my-bullet',//需设置.my-bullet样式
+                    bulletActiveClass: 'my-bullet-active',
+                    clickable :true,
+                },
+            });
+            //此方法为模拟的，hover到分页器的小圆点后自动触发其本身的click事件
+            $(".my-bullet").hover(function() {
+                $(this).click(); //鼠标划上去之后，自动触发点击事件来模仿鼠标划上去的事件
+            },function() {
+                mySwiper.autoplay.start(); //鼠标移出之后，自动轮播开启
+            })
+        })
     </script>
 </body>
 </html>
