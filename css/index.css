@@ -4,26 +4,7 @@
     max-height: 370px; 
     overflow: hidden;
 }
-.tabs_box_1{
-    width: 100%;
-    height: 60px;
-    margin: 40px 0;
-    display: flex;
-    background-color: #F2F2F2;
-    color: #343434;
-}
-.tabs_box_1 > div{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    cursor: pointer;
-}
-.tabs_box_1 > div.active{
-    background-color: #F20114;
-    color: #ffffff;
-}
+
 .my_wallet{
     display: none;
 }
