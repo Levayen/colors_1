@@ -7,10 +7,10 @@
     <script src="../js/jqueryV172.js"></script>
     <script src="../js/swiper.min.js"></script>
     <script src="../js/echarts.min.js"></script>
-    <script src="../js/pager.js"></script>
     <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/salesOfGoodsDetais.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
     <title>商品详情-卖出</title>
 </head>
 <body>
@@ -212,15 +212,7 @@
                         
                     </ul>
                 </div>
-                <div class="sales_record_bottom">
-                    <div>共10086条</div>
-                    <div>
-                        <div id="pager"></div>
-                    </div>
-                </div>
-                <div class="input">
-                    前往 <input type="number" min="1"> 页 <div class="btn">确定</div>
-                </div>
+                <div id="pager"></div>
             </div>
             <div class="goods_details global_shadow">
                 <div class="details_title">
@@ -314,6 +306,22 @@
             </div>
         </div>
     </div>
+    <script src="../layui/layui.js"></script>
+    <script>
+        layui.use('laypage', function(){
+            var laypage = layui.laypage;
+            //执行一个laypage实例
+            laypage.render({
+                elem: 'pager' //注意，这里的 test1 是 ID，不用加 # 号
+                ,count: 500 //数据总数，从服务端得到
+                ,limit: 10
+                ,theme: '#f20114' //自定义选中色值
+                ,prev: '<'
+                ,next: '>'
+                ,layout: ['count', 'prev', 'page', 'next', 'skip']
+            });
+            });
+    </script>
     <script>
         $(function(){
             let myChart = echarts.init(document.getElementById('main'));
