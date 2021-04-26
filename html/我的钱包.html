@@ -153,6 +153,79 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 订单列表 -->
+                    <!-- 待支付 -->
+                    <div class="wallet_order">
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单编号：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_number" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品类别：</label>
+                                        <div class="layui-input-block">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">下单时间：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_time" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <ul>
+                            <li class="wallet_order_item">
+                                <div class="wallet_order_item_t">
+                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
+                                    <div class="wallet_order_name">订单编号：123456</div>
+                                    <div class="wallet_order_t_btn">
+                                        <div>求购订单</div>
+                                    </div>
+                                </div>
+                                <div class="wallet_order_item_b">
+                                    <div class="wallet_order_desc">
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>订单量：900KG</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>下单时间：2021-04-25</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>待付定金：3000元</div>
+                                            <div>支付方式：票据支付</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>待付尾款：1000元</div>
+                                            <div>共计全款：1000元</div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet_order_b_btn">
+                                        <div class="wallet_order_b_btn_1">更换支付方式</div>
+                                        <div class="wallet_order_b_btn_2 cancel_order_btn">取消订单</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <!-- 所持仓 -->
                     <div class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
@@ -190,24 +263,25 @@
                                 <div class="wallet_order_item_t">
                                     <div class="wallet_order_name">商品：哈哈哈哈</div>
                                     <div class="wallet_order_name">订单编号：123456</div>
-                                    <div class="wallet_order_t_btn">
-                                        <div>求购订单</div>
-                                    </div>
                                 </div>
                                 <div class="wallet_order_item_b">
                                     <div class="wallet_order_desc">
-                                        <div>成交价格：32元</div>
-                                        <div>订单量：900KG</div>
-                                        <div>下单时间：2021-04-25</div>
-                                        <div>交割期：2021-04-25</div>
-                                        <div>待付定金：3000元</div>
-                                        <div>支付方式：票据支付</div>
-                                        <div>待付尾款：1000元</div>
-                                        <div>共计全款：1000元</div>
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>待付尾款：3000元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>持仓量：3000KG</div>
+                                            <div>共计全款：3000元</div>
+                                        </div>
                                     </div>
                                     <div class="wallet_order_b_btn">
-                                        <div class="wallet_order_b_btn_1">更换支付方式</div>
-                                        <div class="wallet_order_b_btn_2">取消订单</div>
+                                        <div class="wallet_order_b_btn_1">结算尾款</div>
+                                        <div class="wallet_order_b_btn_2">提前结算</div>
                                     </div>
                                 </div>
                             </li>
@@ -215,55 +289,490 @@
                                 <div class="wallet_order_item_t">
                                     <div class="wallet_order_name">商品：哈哈哈哈</div>
                                     <div class="wallet_order_name">订单编号：123456</div>
-                                    <div class="wallet_order_t_btn">
-                                        <div>求购订单</div>
+                                    <div class="wallet_order_t_status">
+                                        当前交易已暂停
                                     </div>
                                 </div>
                                 <div class="wallet_order_item_b">
                                     <div class="wallet_order_desc">
-                                        <div>成交价格：32元</div>
-                                        <div>订单量：900KG</div>
-                                        <div>下单时间：2021-04-25</div>
-                                        <div>交割期：2021-04-25</div>
-                                        <div>待付定金：3000元</div>
-                                        <div>支付方式：票据支付</div>
-                                        <div>待付尾款：1000元</div>
-                                        <div>共计全款：1000元</div>
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>待付尾款：3000元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>持仓量：3000KG</div>
+                                            <div>共计全款：3000元</div>
+                                        </div>
                                     </div>
                                     <div class="wallet_order_b_btn">
-                                        <div class="wallet_order_b_btn_1">更换支付方式</div>
-                                        <div class="wallet_order_b_btn_2">取消订单</div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="wallet_order_item">
-                                <div class="wallet_order_item_t">
-                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
-                                    <div class="wallet_order_name">订单编号：123456</div>
-                                    <div class="wallet_order_t_btn">
-                                        <div>求购订单</div>
-                                    </div>
-                                </div>
-                                <div class="wallet_order_item_b">
-                                    <div class="wallet_order_desc">
-                                        <div>成交价格：32元</div>
-                                        <div>订单量：900KG</div>
-                                        <div>下单时间：2021-04-25</div>
-                                        <div>交割期：2021-04-25</div>
-                                        <div>待付定金：3000元</div>
-                                        <div>支付方式：票据支付</div>
-                                        <div>待付尾款：1000元</div>
-                                        <div>共计全款：1000元</div>
-                                    </div>
-                                    <div class="wallet_order_b_btn">
-                                        <div class="wallet_order_b_btn_1">更换支付方式</div>
-                                        <div class="wallet_order_b_btn_2">取消订单</div>
+                                        <div class="wallet_order_b_btn_3 show_mask_5">申请卖出</div>
+                                        <div class="wallet_order_b_btn_2">结算尾款</div>
+                                        <div class="wallet_order_b_btn_2">提前结算</div>
                                     </div>
                                 </div>
                             </li>
                         </ul>
-                        
                     </div>
+                    <!-- 交割期 -->
+                    <div class="wallet_order">
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单编号：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_number" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品类别：</label>
+                                        <div class="layui-input-block">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">下单时间：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_time" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <ul>
+                            <li class="wallet_order_item">
+                                <div class="wallet_order_item_t">
+                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
+                                    <div class="wallet_order_name">订单编号：123456</div>
+                                </div>
+                                <div class="wallet_order_item_b">
+                                    <div class="wallet_order_desc">
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>待付尾款：3000元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>持仓量：3000KG</div>
+                                            <div>共计全款：3000元</div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet_order_b_btn">
+                                        <div class="wallet_order_b_btn_2">自提凭证</div>
+                                        <div class="wallet_order_b_btn_2">提前结算</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 已违约订单 -->
+                    <div class="wallet_order">
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单编号：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_number" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品类别：</label>
+                                        <div class="layui-input-block">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">下单时间：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_time" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <ul>
+                            <li class="wallet_order_item">
+                                <div class="wallet_order_item_t">
+                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
+                                    <div class="wallet_order_name">订单编号：123456</div>
+                                    <div class="wallet_order_t_btn_2">
+                                        <div class="show_mask_6">申请解冻</div>
+                                    </div>
+                                </div>
+                                <div class="wallet_order_item_b">
+                                    <div class="wallet_order_desc">
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>待付尾款：3000元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>持仓量：3000KG</div>
+                                            <div>共计全款：3000元</div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet_order_b_btn">
+                                        <div class="wallet_order_b_btn_2">逾期未付款<br>已冻结该订单定金</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 交易管理列表 -->
+                    <!-- 我的卖出 -->
+                    <div class="wallet_order">
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单编号：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_number" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品类别：</label>
+                                        <div class="layui-input-block">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单量：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_time" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- 我的卖出 -->
+                        <ul>
+                            <li class="wallet_order_item">
+                                <div class="wallet_order_item_t">
+                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
+                                    <div class="wallet_order_name">订单编号：123456</div>
+                                    <div class="wallet_order_t_btn">
+                                        <div>对方票据支付</div>
+                                    </div>
+                                </div>
+                                <div class="wallet_order_item_b">
+                                    <div class="wallet_order_desc">
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>收取定金：100元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>交易时间：2021-03-08</div>
+                                            <div>预计收益：3000元</div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet_order_b_btn">
+                                        <div class="wallet_order_b_btn_2 show_mask_7">查看票据</div>
+                                        <div class="wallet_order_b_btn_2 show_mask_8">取消转卖</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wallet_order_item">
+                                <div class="wallet_order_item_t">
+                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
+                                    <div class="wallet_order_name">订单编号：123456</div>
+                                </div>
+                                <div class="wallet_order_item_b">
+                                    <div class="wallet_order_desc">
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>收取定金：100元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>交易时间：2021-03-08</div>
+                                            <div>预计收益：3000元</div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet_order_b_btn">
+                                        <div class="wallet_order_b_btn_2 show_mask_8">取消转卖</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 卖出成功 -->
+                    <div class="wallet_order">
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单编号：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_number" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品类别：</label>
+                                        <div class="layui-input-block">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单量：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_time" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <ul>
+                            <li class="wallet_order_item">
+                                <div class="wallet_order_item_t">
+                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
+                                    <div class="wallet_order_name">订单编号：123456</div>
+                                </div>
+                                <div class="wallet_order_item_b">
+                                    <div class="wallet_order_desc">
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>收取定金：100元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>交易时间：2021-03-08</div>
+                                            <div>预计收益：3000元</div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet_order_b_btn">
+                                        <div class="wallet_order_b_btn_2">卖出成功</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 求购中 -->
+                    <div class="wallet_order">
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单编号：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_number" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品类别：</label>
+                                        <div class="layui-input-block">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单量：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_time" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- 求购中 -->
+                        <ul>
+                            <li class="wallet_order_item">
+                                <div class="wallet_order_item_t">
+                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
+                                    <div class="wallet_order_name">订单编号：123456</div>
+                                </div>
+                                <div class="wallet_order_item_b">
+                                    <div class="wallet_order_desc">
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>已付定金：1000</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>待付尾款：100元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>下单时间：2021-03-08</div>
+                                            <div>共计全款：3000元</div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet_order_b_btn">
+                                        <div class="wallet_order_b_btn_2">求购中</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 求购成功-->
+                    <div class="wallet_order">
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单编号：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_number" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品类别：</label>
+                                        <div class="layui-input-block">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单量：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_time" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                        <!-- 求购成功 -->
+                        <ul>
+                            <li class="wallet_order_item">
+                                <div class="wallet_order_item_t">
+                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
+                                    <div class="wallet_order_name">订单编号：123456</div>
+                                </div>
+                                <div class="wallet_order_item_b">
+                                    <div class="wallet_order_desc">
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>待付尾款：100元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>下单时间：2021-03-08</div>
+                                            <div>共计全款：3000元</div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet_order_b_btn">
+                                        <div class="wallet_order_b_btn_2">求购成功</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 我的关注 -->
+                    <div class="wallet_order">
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品类别：</label>
+                                        <div class="layui-input-block">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- 已关注的商品 -->
+                        <ul>
+                            <li class="wallet_order_item">
+                                <div class="wallet_order_item_t">
+                                    <div class="wallet_order_name">商品：哈哈哈哈</div>
+                                    <div class="wallet_order_name">订单编号：123456</div>
+                                </div>
+                                <div class="wallet_order_item_b">
+                                    <div class="wallet_order_desc">
+                                        <div class="order_desc_item">
+                                            <div>成交价格：32元</div>
+                                            <div>交割期：2021-04-25</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>订单量：500KG</div>
+                                            <div>待付尾款：100元</div>
+                                        </div>
+                                        <div class="order_desc_item">
+                                            <div>下单时间：2021-03-08</div>
+                                            <div>共计全款：3000元</div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet_order_b_btn">
+                                        <div class="wallet_order_b_btn_2">取消关注</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 充值记录 -->
                     <div class="recharge_record">
                         <div class="title_bar_2">
                             <div><img src="../img/icon_022.png" alt=""></div>
@@ -291,8 +800,8 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="trade_list no_margin_top">
-                            <div class="trade_list_header list_header_bold">
+                        <div class="record_list no_margin_top">
+                            <div class="record_list_header list_header_bold">
                                 <div class="list_width_1">序号</div>
                                 <div class="list_width_2">充值编号</div>
                                 <div class="list_width_3">充值时间</div>
@@ -336,11 +845,265 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- 提现记录 -->
+                    <div class="withdrawal_record">
+                        <div class="title_bar_2">
+                            <div><img src="../img/icon_023.png" alt=""></div>
+                            <div>提现记录</div>
+                        </div>
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单编号：</label>
+                                        <div class="layui-input-block" style="width: 130px;">
+                                            <input name="order_number" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">到账银行卡：</label>
+                                        <div class="layui-input-block" style="width: 130px;">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">提现时间：</label>
+                                        <div class="layui-input-inline" style="width: 130px;">
+                                            <input type="text" name="begin_time" autocomplete="off" class="layui-input">
+                                        </div>
+                                        <div class="layui-form-mid">—</div>
+                                        <div class="layui-input-inline" style="width: 130px;">
+                                            <input type="text" name="end_time" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="record_list no_margin_top">
+                            <div class="record_list_header list_header_bold">
+                                <div class="w_80">序号</div>
+                                <div class="w_165">提现编号</div>
+                                <div class="w_165">交易金额(元)</div>
+                                <div class="w_165">现账户余额(元)</div>
+                                <div class="w_165">到账银行卡</div>
+                                <div class="w_165 sort_time_1">提现到账时间 
+                                    <span class="sort_icon_1">
+                                        <img class="sort_up" src="../img/sort-up.png" alt="">
+                                        <img class="sort_down" src="../img/sort-down.png" alt="">
+                                    </span> 
+                                </div>
+                                <div class="w_145">状态</div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="w_80">1</div>
+                                    <div class="w_160">123456</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">9527</div>
+                                    <div class="w_165">2021-04-25</div>
+                                    <div class="w_145">充值成功</div>
+                                </li>
+                                <li>
+                                    <div class="w_80">1</div>
+                                    <div class="w_160">123456</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">9527</div>
+                                    <div class="w_165">2021-04-25</div>
+                                    <div class="w_145">充值成功</div>
+                                </li>
+                                <li>
+                                    <div class="w_80">1</div>
+                                    <div class="w_160">123456</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">9527</div>
+                                    <div class="w_165">2021-04-25</div>
+                                    <div class="w_145">充值成功</div>
+                                </li>
+                                <li>
+                                    <div class="w_80">1</div>
+                                    <div class="w_160">123456</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">9527</div>
+                                    <div class="w_165">2021-04-25</div>
+                                    <div class="w_145">充值成功</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 资金流水 -->
+                    <div class="capital_record">
+                        <div class="title_bar_2">
+                            <div><img src="../img/icon_024.png" alt=""></div>
+                            <div>资金流水</div>
+                        </div>
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">支付方法：</label>
+                                        <div class="layui-input-block" style="width: 130px;">
+                                            <select lay-filter="required">
+                                                <option value=""></option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">时间：</label>
+                                        <div class="layui-input-inline" style="width: 130px;">
+                                            <input type="text" name="begin_time" autocomplete="off" class="layui-input">
+                                        </div>
+                                        <div class="layui-form-mid">—</div>
+                                        <div class="layui-input-inline" style="width: 130px;">
+                                            <input type="text" name="end_time" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="record_list no_margin_top">
+                            <div class="record_list_header list_header_bold">
+                                <div class="w_80">序号</div>
+                                <div class="w_165">交易时间</div>
+                                <div class="w_160">科目</div>
+                                <div class="w_165">支付方式</div>
+                                <div class="w_165">交易金额(元)</div>
+                                <div class="w_165">现账户余额(元)</div>
+                                <div class="w_145">状态</div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="w_80">1</div>
+                                    <div class="w_165">2021-04-25</div>
+                                    <div class="w_160">支付</div>
+                                    <div class="w_165">现汇</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_145">充值成功</div>
+                                </li>
+                                <li>
+                                    <div class="w_80">1</div>
+                                    <div class="w_165">2021-04-25</div>
+                                    <div class="w_160">支付</div>
+                                    <div class="w_165">现汇</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_145">充值成功</div>
+                                </li>
+                                <li>
+                                    <div class="w_80">1</div>
+                                    <div class="w_165">2021-04-25</div>
+                                    <div class="w_160">支付</div>
+                                    <div class="w_165">现汇</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_145">充值成功</div>
+                                </li>
+                                <li>
+                                    <div class="w_80">1</div>
+                                    <div class="w_165">2021-04-25</div>
+                                    <div class="w_160">支付</div>
+                                    <div class="w_165">现汇</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_165">100</div>
+                                    <div class="w_145">充值成功</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 我的收益 -->
+                    <div class="profit_record">
+                        <div class="title_bar_2">
+                            <div><img src="../img/icon_025.png" alt=""></div>
+                            <div>我的收益</div>
+                        </div>
+                        <div class="wallet_form">
+                            <form class="layui-form" action="">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">订单编号：</label>
+                                        <div class="layui-input-block">
+                                            <input name="order_number" type="text" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">商品类别：</label>
+                                        <div class="layui-input-inline" style="width: 150px;">
+                                            <input type="text" name="price_min" autocomplete="off" class="layui-input">
+                                        </div>
+                                        <div class="layui-form-mid">—</div>
+                                        <div class="layui-input-inline" style="width: 150px;">
+                                            <input type="text" name="price_max" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="record_list no_margin_top">
+                            <div class="record_list_header list_header_bold">
+                                <div class="list_width_1">序号</div>
+                                <div class="list_width_2">充值编号</div>
+                                <div class="list_width_3">商品名称</div>
+                                <div class="list_width_2">交易时间</div>
+                                <div class="list_width_3">收益金额(元)</div>
+                                <div class="list_width_6">状态</div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="list_width_1">1</div>
+                                    <div class="list_width_2">123456</div>
+                                    <div class="list_width_3">分散嫩黄</div>
+                                    <div class="list_width_2">2021-04-25 10:21</div>
+                                    <div class="list_width_3">100</div>
+                                    <div class="list_width_6">已到账-余额</div>
+                                </li>
+                                <li>
+                                    <div class="list_width_1">1</div>
+                                    <div class="list_width_2">123456</div>
+                                    <div class="list_width_3">分散嫩黄</div>
+                                    <div class="list_width_2">2021-04-25 10:21</div>
+                                    <div class="list_width_3">100</div>
+                                    <div class="list_width_6">已到账-余额</div>
+                                </li>
+                                <li>
+                                    <div class="list_width_1">1</div>
+                                    <div class="list_width_2">123456</div>
+                                    <div class="list_width_3">分散嫩黄</div>
+                                    <div class="list_width_2">2021-04-25 10:21</div>
+                                    <div class="list_width_3">100</div>
+                                    <div class="list_width_6">已到账-余额</div>
+                                </li>
+                                <li>
+                                    <div class="list_width_1">1</div>
+                                    <div class="list_width_2">123456</div>
+                                    <div class="list_width_3">分散嫩黄</div>
+                                    <div class="list_width_2">2021-04-25 10:21</div>
+                                    <div class="list_width_3">100</div>
+                                    <div class="list_width_6">已到账-余额</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <div id="pager"></div>
                 </div>
-            </div>
+                </div>
         </div>
-        
+        <!-- 弹窗都在这 -->
         <div class="wallet_mask">
             <!-- 取消订单 -->
             <div class="wallet_popup cancel_order">
@@ -545,6 +1308,129 @@
                     </ul>
                 </div>
             </div>
+            <!-- 申请转卖 -->
+            <div class="wallet_popup resell">
+                <div class="wallet_popup_header">
+                    <div>申请转卖</div>
+                    <div class="closer_mask"><img src="../img/close.png" alt=""></div>
+                </div>
+                <div class="recharge_popup_main">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">商品名称：</label>
+                            <div class="label_right">坪洲支行</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">商品类别：</label>
+                            <div class="label_right">坪洲支行</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">店家：</label>
+                            <div class="label_right">坪洲支行</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">订单量：</label>
+                            <div class="layui-input-block input_flex">
+                                <input name="user_name" type="text" class="layui-input">
+                                <div class="label_right">KG</div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">售价：</label>
+                            <div class="layui-input-block input_flex">
+                                <input name="user_name" type="text" class="layui-input">
+                                <div class="label_right">元/KG</div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">定金：</label>
+                            <div class="layui-input-block input_flex">
+                                <input name="user_name" type="text" class="layui-input">
+                                <div class="label_right">元</div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">尾款：</label>
+                            <div class="layui-input-block input_flex">
+                                <input name="user_name" type="text" class="layui-input">
+                                <div class="label_right">元</div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">提货日期：</label>
+                            <div class="label_right">2021年05月08日</div>
+                        </div>
+                        <div class="wallet_popup_footer">
+                            <div class="cancel_1 closer_mask">取消</div>
+                            <div class="determine_1">确定</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- 申请解冻 -->
+            <div class="wallet_popup thaw">
+                <div class="wallet_popup_header">
+                    <div>申请解冻资金</div>
+                    <div class="closer_mask"><img src="../img/close.png" alt=""></div>
+                </div>
+                <div class="recharge_popup_main">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">冻结账号：</label>
+                            <div class="label_right">上海七彩云电子商务有限公司</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">订单编号：</label>
+                            <div class="label_right">123456</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">被冻结金额：</label>
+                            <div class="label_right">65300</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">解冻理由：</label>
+                            <div class="layui-input-block">
+                                <textarea placeholder="请输入内容" style="resize:none" class="layui-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="wallet_popup_footer">
+                            <div class="cancel_1 closer_mask">取消</div>
+                            <div class="determine_1">确定</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- 查看票据 -->
+            <div class="wallet_popup invoice">
+                <div class="wallet_popup_header">
+                    <div>查看票据</div>
+                    <div class="closer_mask"><img src="../img/close.png" alt=""></div>
+                </div>
+                <div class="invoice_popup_main">
+                    <p>电子票据</p>
+                    <div>
+                        <img src="../img/img_009.png" alt="">
+                    </div>
+                </div>
+                <div class="invoice_popup_footer">
+                    <div class="popup_btn_1">接受票据</div>
+                    <div class="popup_btn_1">拒绝票据</div>
+                </div>
+            </div>
+            <!-- 取消转卖 -->
+            <div class="wallet_popup cancel_resell">
+                <div class="wallet_popup_header">
+                    <div>取消转卖</div>
+                    <div class="closer_mask"><img src="../img/close.png" alt=""></div>
+                </div>
+                <div class="wallet_popup_main">
+                    <p>是否确定取消转卖？</p>
+                </div>
+                <div class="wallet_popup_footer">
+                    <div class="cancel_1 closer_mask">取消</div>
+                    <div class="determine_1">确定</div>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <div class="footer_main">
@@ -651,7 +1537,8 @@
     </script>
     <script>
         $(function(){
-            // $('.mask').show()
+            // $('.wallet_mask').show()
+            // $('.invoice').show()
             $('.wallet_menu_i').click(function(){
                 $(this).addClass("active");  
                 $(this).siblings().removeClass("active");
@@ -661,7 +1548,7 @@
                 $(this).siblings().removeClass("active");
             })
             //取消订单
-            $('.wallet_order_b_btn_2').click(function(){
+            $('.cancel_order_btn').click(function(){
                 $('.wallet_mask').show()
                 $('.cancel_order').show()
             })
@@ -685,6 +1572,27 @@
                 $('.wallet_mask').show()
                 $('.my_bankcard').show()
             })
+            //申请卖出
+            $('.show_mask_5').click(function(){
+                $('.wallet_mask').show()
+                $('.resell').show()
+            })
+            //申请解冻
+            $('.show_mask_6').click(function(){
+                $('.wallet_mask').show()
+                $('.thaw').show()
+            })
+            //查看票据
+            $('.show_mask_7').click(function(){
+                $('.wallet_mask').show()
+                $('.invoice').show()
+            })
+            //取消转卖
+            $('.show_mask_8').click(function(){
+                $('.wallet_mask').show()
+                $('.cancel_resell').show()
+            })
+            
             //关闭弹窗
             $('.closer_mask').click(function(){
                 $('.wallet_mask').hide()
@@ -693,6 +1601,18 @@
                 $('.withdrawal').hide()
                 $('.bind_bankcard').hide()
                 $('.my_bankcard').hide()
+                $('.resell').hide()
+                $('.thaw').hide()
+                $('.invoice').hide()
+                $('.cancel_resell').hide()
+            })
+            //排序
+            $('.sort_time_1').toggle(function(){
+                $('.sort_up').show()
+                $('.sort_down').hide()
+            },function(){
+                $('.sort_up').hide()
+                $('.sort_down').show()
             })
         })
     </script>

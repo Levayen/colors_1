@@ -1604,6 +1604,9 @@ input::-webkit-inner-spin-button{
     border: 1px solid #FF761D;
     color: #ffffff;
 }
+.wallet_order_t_status{
+    color: #ff761d;
+}
 .wallet_form{
     height: 89px;
     box-sizing: border-box;
@@ -1625,13 +1628,14 @@ input::-webkit-inner-spin-button{
     padding-left: 44px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .wallet_order_name{
     width: 340px;
     font-size: 16px;
     font-weight: bold;
 }
+.wallet_order_t_btn_2,
 .wallet_order_t_btn{
     width: 300px;
 }
@@ -1639,6 +1643,17 @@ input::-webkit-inner-spin-button{
     border-radius: 5px;
     border: 1px solid #FF761D;
     color: #FF761D;
+    height: 30px;
+    width: 96px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.wallet_order_t_btn_2 > div{
+    border-radius: 5px;
+    border: 1px solid #FF761D;
+    background-color: #ff761d;
+    color: #ffffff;
     height: 30px;
     width: 96px;
     line-height: 30px;
@@ -1660,9 +1675,21 @@ input::-webkit-inner-spin-button{
 }
 .wallet_order_desc > div{
     width: 200px;
-    line-height: 32px;
+    height: 100%;
     font-size: 16px;
     color: #676767;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.order_desc_item{
+    display: flex;
+    justify-content: flex-start;
+}
+.order_desc_item > div{
+    line-height: 34px;
+    width: 100%;
 }
 .wallet_order_b_btn{
     width: 170px;
@@ -1671,26 +1698,42 @@ input::-webkit-inner-spin-button{
     border-left: 1px solid #ECECEC;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-content: space-around;
     justify-content: center;
-    gap: 20px;
 }
 .wallet_order_b_btn > div{
     width: 123px;
-    height: 37px;
     border-radius: 5px;
-    line-height: 37px;
-    text-align: center;
     cursor: pointer;
+    box-sizing: border-box;
 }
 .wallet_order_b_btn  > .wallet_order_b_btn_1{
     background-color: #ff761d;
     border: 1px solid #FF761D;
     color: #ffffff;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
 }
 .wallet_order_b_btn  > .wallet_order_b_btn_2{
     border: 1px solid #FF761D;
     color: #FF761D;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+}
+.wallet_order_b_btn  > .wallet_order_b_btn_3{
+    border: 1px solid #666666;
+    color: #666666;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+}
+.wallet_order_b_btn  > .wallet_order_b_btn_4{
+    border: 1px solid #FF761D;
+    color: #FF761D;
+    text-align: center;
+    padding: 20px 0;
 }
 .wallet_mask{
     width: 100vw;
@@ -1782,6 +1825,8 @@ input::-webkit-inner-spin-button{
 .label_right{
     height: 38px;
     line-height: 38px;
+    font-size: 18px;
+    color: #666;
 }
 .recharge_popup_main .layui-form-label{
     font-weight: bold !important;
@@ -1858,4 +1903,145 @@ input::-webkit-inner-spin-button{
 .list_header_bold > div{
     font-weight: bold;
     font-size: 16px;
+}
+.withdrawal_record{
+    margin-top: 15px;
+    display: none;
+}
+.withdrawal_record .layui-form-label{
+    width: 100px !important;
+}
+.withdrawal_record .layui-input-block{
+    margin-left: 130px !important;
+}
+.capital_record{
+    margin-top: 15px;
+    display: none;
+}
+.capital_record .layui-form-label{
+    width: 100px !important;
+}
+.capital_record .layui-input-block{
+    margin-left: 130px !important;
+}
+
+.profit_record{
+    margin-top: 15px;
+    display: none;
+}
+.profit_record .layui-form-label{
+    width: 100px !important;
+}
+.profit_record .layui-input-block{
+    margin-left: 130px !important;
+}
+.w_80{
+    width: 80px;
+    text-align: center;
+}
+.w_160{
+    width: 160px;
+    text-align: center;
+}
+.w_165{
+    width: 165px;
+    text-align: center;
+}
+.w_145{
+    width: 145px;
+    text-align: center;
+}
+.sort_icon_1{
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+}
+.sort_icon_1 > img{
+    width: 100%;
+}
+.sort_up{
+    display: none;
+}
+.sort_time_1{
+    cursor: pointer;
+}
+.record_list{
+    margin-top: 35px;
+    border: 1px solid #EBEBEB;
+}
+.record_list_header{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #EBEBEB;
+}
+.record_list ul li{
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #EBEBEB;
+}
+.record_list ul li:last-child{
+    border-bottom: none;
+}
+.record_list ul li:nth-child(even){
+    background-color: #FBFBFB;
+}
+.record_list ul li:nth-child(odd){
+    background-color: #fff;
+}
+.input_flex{
+    display: flex;
+}
+.input_flex .layui-input{
+    width: 65% !important;
+    margin-right: 10px;
+}
+.popup_btn_1{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #ff771d;
+    color: #ffffff;
+}
+.invoice_popup_footer{
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 45px;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.invoice_popup_main{
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.invoice_popup_main > p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 0 90px;
+    text-align: center;
+}
+.invoice_popup_main > div{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.invoice_popup_main > div > img{
+    max-width: 100%;
 }
