@@ -526,7 +526,7 @@ a{
     box-shadow: 0 0 10px #cccccc;
     border: none;
 }
-.list_box > .active > .shop_name{
+.list_box > .active > .shop_name_1{
     color: #F20114;
 }
 .banner_box{
@@ -1938,6 +1938,12 @@ input::-webkit-inner-spin-button{
     border: 1px solid #FF761D;
     color: #ffffff;
 }
+.wallet_order{
+    display: none;
+}
+.wallet_order.active{
+    display: block;
+}
 .wallet_order_t_status{
     color: #ff761d;
 }
@@ -2210,6 +2216,7 @@ input::-webkit-inner-spin-button{
     background-color: #fe771d;
     color: #ffffff;
     border-radius: 5px;
+    cursor: pointer;
 }
 .recharge_record{
     margin-top: 20px;
@@ -2378,4 +2385,7 @@ input::-webkit-inner-spin-button{
 }
 .invoice_popup_main > div > img{
     max-width: 100%;
+}
+#wallet_order_1{
+    display: block;
 }

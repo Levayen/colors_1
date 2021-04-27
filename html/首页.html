@@ -85,25 +85,25 @@
                 <div class="shop_nav">
                     <div>预售商品</div>
                     <div class="sort">
-                        <div>
+                        <div class="index_sort_1">
                             <div>综合</div>
                             <div>
-                                <img src="../img/sort-up.png" alt="">
-                                <img style="display: none;" src="../img/sort-down.png" alt="">
+                                <img class="sort_up" src="../img/sort-up.png" alt="">
+                                <img class="sort_down" src="../img/sort-down.png" alt="">
                             </div>
                         </div>
-                        <div>
+                        <div class="index_sort_2">
                             <div>可供销量</div>
                             <div>
-                                <img src="../img/sort-up.png" alt="">
-                                <img style="display: none;" src="../img/sort-down.png" alt="">
+                                <img class="sort_up" src="../img/sort-up.png" alt="">
+                                <img class="sort_down" src="../img/sort-down.png" alt="">
                             </div>
                         </div>
-                        <div>
+                        <div class="index_sort_3">
                             <div>销售量</div>
                             <div>
-                                <img src="../img/sort-up.png" alt="">
-                                <img style="display: none;" src="../img/sort-down.png" alt="">
+                                <img class="sort_up" src="../img/sort-up.png" alt="">
+                                <img class="sort_down" src="../img/sort-down.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -511,6 +511,31 @@
             $(".list_item").click(function(e){
                 $(this).addClass("active");  
                 $(this).siblings().removeClass("active");
+            })
+
+            //排序
+            $('.index_sort_1').toggle(function(){
+                $('.index_sort_1 .sort_up').show()
+                $('.index_sort_1 .sort_down').hide()
+            },function(){
+                $('.index_sort_1 .sort_up').hide()
+                $('.index_sort_1 .sort_down').show()
+            })
+            //排序
+            $('.index_sort_2').toggle(function(){
+                $('.index_sort_2 .sort_up').show()
+                $('.index_sort_2 .sort_down').hide()
+            },function(){
+                $('.index_sort_2 .sort_up').hide()
+                $('.index_sort_2 .sort_down').show()
+            })
+            //排序
+            $('.index_sort_3').toggle(function(){
+                $('.index_sort_3 .sort_up').show()
+                $('.index_sort_3 .sort_down').hide()
+            },function(){
+                $('.index_sort_3 .sort_up').hide()
+                $('.index_sort_3 .sort_down').show()
             })
         })
     </script>

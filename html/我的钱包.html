@@ -89,27 +89,27 @@
                             </div> 
                             <div>订单管理</div>
                         </li>
-                        <li class="wallet_menu_i active">待支付订单</li>
-                        <li class="wallet_menu_i">所持仓订单</li>
-                        <li class="wallet_menu_i">交割期订单</li>
-                        <li class="wallet_menu_i">已违约订单</li>
+                        <li id="1" class="wallet_menu_i active">待支付订单</li>
+                        <li id="2" class="wallet_menu_i">所持仓订单</li>
+                        <li id="3" class="wallet_menu_i">交割期订单</li>
+                        <li id="4" class="wallet_menu_i">已违约订单</li>
                         <li class="wallet_menu_t">
                             <div class="menu_icon">
                                 <img src="../img/icon_019.png" alt="">
                             </div> 
                             <div>交易管理</div>
                         </li>
-                        <li class="wallet_menu_i">我的卖出</li>
-                        <li class="wallet_menu_i">卖出成功</li>
-                        <li class="wallet_menu_i">我的求购</li>
-                        <li class="wallet_menu_i">求购成功</li>
+                        <li id="5" class="wallet_menu_i">我的卖出</li>
+                        <li id="6" class="wallet_menu_i">卖出成功</li>
+                        <li id="7" class="wallet_menu_i">我的求购</li>
+                        <li id="8" class="wallet_menu_i">求购成功</li>
                         <li class="wallet_menu_t">
                             <div class="menu_icon">
                                 <img src="../img/icon_020.png" alt="">
                             </div> 
                             <div>我的关注</div>
                         </li>
-                        <li class="wallet_menu_i">已关注商品</li>
+                        <li id="9" class="wallet_menu_i">已关注商品</li>
                     </ul>
                 </div>
                 <div class="wallet_right">
@@ -130,32 +130,32 @@
                             <div class="wallet_btn_1 active show_mask_1">
                                 充值
                             </div>
-                            <div class="wallet_btn">
+                            <div id="10" class="wallet_btn wallet_menu_i">
                                 充值记录
                             </div>
                             <div class="wallet_btn show_mask_3">
                                 绑定银行卡
                             </div>
-                            <div class="wallet_btn">
+                            <div id="12" class="wallet_btn wallet_menu_i">
                                 资金流水记录
                             </div>
                             <div class="wallet_btn_1 show_mask_2">
                                 提现
                             </div>
-                            <div class="wallet_btn">
+                            <div id="11" class="wallet_btn wallet_menu_i">
                                 提现记录
                             </div>
                             <div class="wallet_btn show_mask_4">
                                 我的银行卡
                             </div>
-                            <div class="wallet_btn">
+                            <div id="13" class="wallet_btn wallet_menu_i">
                                 我的收益
                             </div>
                         </div>
                     </div>
                     <!-- 订单列表 -->
                     <!-- 待支付 -->
-                    <div class="wallet_order">
+                    <div id="wallet_order_1" class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
                                 <div class="layui-form-item">
@@ -226,7 +226,7 @@
                         
                     </div>
                     <!-- 所持仓 -->
-                    <div class="wallet_order">
+                    <div id="wallet_order_2" class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
                                 <div class="layui-form-item">
@@ -318,7 +318,7 @@
                         </ul>
                     </div>
                     <!-- 交割期 -->
-                    <div class="wallet_order">
+                    <div id="wallet_order_3" class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
                                 <div class="layui-form-item">
@@ -380,7 +380,7 @@
                         </ul>
                     </div>
                     <!-- 已违约订单 -->
-                    <div class="wallet_order">
+                    <div id="wallet_order_4" class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
                                 <div class="layui-form-item">
@@ -437,7 +437,7 @@
                                         </div>
                                     </div>
                                     <div class="wallet_order_b_btn">
-                                        <div class="wallet_order_b_btn_2">逾期未付款<br>已冻结该订单定金</div>
+                                        <div class="wallet_order_b_btn_4">逾期未付款<br>已冻结该订单定金</div>
                                     </div>
                                 </div>
                             </li>
@@ -445,7 +445,7 @@
                     </div>
                     <!-- 交易管理列表 -->
                     <!-- 我的卖出 -->
-                    <div class="wallet_order">
+                    <div id="wallet_order_5" class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
                                 <div class="layui-form-item">
@@ -536,7 +536,7 @@
                         </ul>
                     </div>
                     <!-- 卖出成功 -->
-                    <div class="wallet_order">
+                    <div id="wallet_order_6" class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
                                 <div class="layui-form-item">
@@ -598,7 +598,7 @@
                         </ul>
                     </div>
                     <!-- 求购中 -->
-                    <div class="wallet_order">
+                    <div id="wallet_order_7" class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
                                 <div class="layui-form-item">
@@ -660,7 +660,7 @@
                         </ul>
                     </div>
                     <!-- 求购成功-->
-                    <div class="wallet_order">
+                    <div id="wallet_order_8" class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
                                 <div class="layui-form-item">
@@ -722,7 +722,7 @@
                         </ul>
                     </div>
                     <!-- 我的关注 -->
-                    <div class="wallet_order">
+                    <div id="wallet_order_9" class="wallet_order">
                         <div class="wallet_form">
                             <form class="layui-form" action="">
                                 <div class="layui-form-item">
@@ -773,7 +773,7 @@
                         </ul>
                     </div>
                     <!-- 充值记录 -->
-                    <div class="recharge_record">
+                    <div id="wallet_order_10" class="recharge_record">
                         <div class="title_bar_2">
                             <div><img src="../img/icon_022.png" alt=""></div>
                             <div>充值记录</div>
@@ -846,7 +846,7 @@
                         </div>
                     </div>
                     <!-- 提现记录 -->
-                    <div class="withdrawal_record">
+                    <div id="wallet_order_11" class="withdrawal_record">
                         <div class="title_bar_2">
                             <div><img src="../img/icon_023.png" alt=""></div>
                             <div>提现记录</div>
@@ -942,7 +942,7 @@
                         </div>
                     </div>
                     <!-- 资金流水 -->
-                    <div class="capital_record">
+                    <div id="wallet_order_12" class="capital_record">
                         <div class="title_bar_2">
                             <div><img src="../img/icon_024.png" alt=""></div>
                             <div>资金流水</div>
@@ -1027,7 +1027,7 @@
                         </div>
                     </div>
                     <!-- 我的收益 -->
-                    <div class="profit_record">
+                    <div id="wallet_order_13" class="profit_record">
                         <div class="title_bar_2">
                             <div><img src="../img/icon_025.png" alt=""></div>
                             <div>我的收益</div>
@@ -1269,7 +1269,7 @@
                                 <input name="user_name" type="text" class="layui-input">
                             </div>
                             <div class="layui-input-inline">
-                                <div class="get_code">获取验证码</div>
+                                <div class="get_code global_hand">获取验证码</div>
                             </div>
                         </div>
                         <div class="wallet_popup_footer">
@@ -1525,7 +1525,7 @@
             var laypage = layui.laypage;
                 //执行一个laypage实例
                 laypage.render({
-                    elem: 'pager' //注意，这里的 test1 是 ID，不用加 # 号
+                    elem: 'pager' //注意，这里的是 ID，不用加 # 号
                     ,count: 500 //数据总数，从服务端得到
                     ,limit: 10
                     ,theme: '#f20114' //自定义选中色值
@@ -1539,80 +1539,86 @@
         $(function(){
             // $('.wallet_mask').show()
             // $('.invoice').show()
-            $('.wallet_menu_i').click(function(){
+            $('.wallet_menu_i').click(function(e){
                 $(this).addClass("active");  
                 $(this).siblings().removeClass("active");
+                let id = $(this).attr('id');
+                let cutId = '#wallet_order_' + id;
+                $('.wallet_order').hide();
+                $("[class$='_record']").hide();
+                $(cutId).show(); 
             })
             $('.wallet_top_2 > div').click(function(){
                 $(this).addClass("active");  
                 $(this).siblings().removeClass("active");
             })
+            //弹窗的方法
             //取消订单
             $('.cancel_order_btn').click(function(){
-                $('.wallet_mask').show()
-                $('.cancel_order').show()
+                $('.wallet_mask').show();
+                $('.cancel_order').show();
             })
             //充值
             $('.show_mask_1').click(function(){
-                $('.wallet_mask').show()
-                $('.recharge').show()
+                $('.wallet_mask').show();
+                $('.recharge').show();
             })
             //提现
             $('.show_mask_2').click(function(){
-                $('.wallet_mask').show()
-                $('.withdrawal').show()
+                $('.wallet_mask').show();
+                $('.withdrawal').show();
             })
             //绑定银行卡
             $('.show_mask_3').click(function(){
-                $('.wallet_mask').show()
-                $('.bind_bankcard').show()
+                $('.wallet_mask').show();
+                $('.bind_bankcard').show();
             })
             //我的银行卡
             $('.show_mask_4').click(function(){
-                $('.wallet_mask').show()
-                $('.my_bankcard').show()
+                $('.wallet_mask').show();
+                $('.my_bankcard').show();
             })
             //申请卖出
             $('.show_mask_5').click(function(){
-                $('.wallet_mask').show()
-                $('.resell').show()
+                $('.wallet_mask').show();
+                $('.resell').show();
             })
             //申请解冻
             $('.show_mask_6').click(function(){
-                $('.wallet_mask').show()
-                $('.thaw').show()
+                $('.wallet_mask').show();
+                $('.thaw').show();
             })
             //查看票据
             $('.show_mask_7').click(function(){
-                $('.wallet_mask').show()
-                $('.invoice').show()
+                $('.wallet_mask').show();
+                $('.invoice').show();
             })
             //取消转卖
             $('.show_mask_8').click(function(){
-                $('.wallet_mask').show()
-                $('.cancel_resell').show()
+                $('.wallet_mask').show();
+                $('.cancel_resell').show();
             })
             
             //关闭弹窗
             $('.closer_mask').click(function(){
-                $('.wallet_mask').hide()
-                $('.cancel_order').hide()
-                $('.recharge').hide()
-                $('.withdrawal').hide()
-                $('.bind_bankcard').hide()
-                $('.my_bankcard').hide()
-                $('.resell').hide()
-                $('.thaw').hide()
-                $('.invoice').hide()
-                $('.cancel_resell').hide()
+                $('.wallet_mask').hide();
+                $('.cancel_order').hide();
+                $('.recharge').hide();
+                $('.withdrawal').hide();
+                $('.bind_bankcard').hide();
+                $('.my_bankcard').hide();
+                $('.resell').hide();
+                $('.thaw').hide();
+                $('.invoice').hide();
+                $('.cancel_resell').hide();
             })
-            //排序
+            //排序切换
             $('.sort_time_1').toggle(function(){
-                $('.sort_up').show()
-                $('.sort_down').hide()
+                $('.sort_up').show();
+                $('.sort_down').hide();
             },function(){
-                $('.sort_up').hide()
-                $('.sort_down').show()
+                $('.sort_up').hide();
+                $('.sort_down').show();
             })
         })
     </script>
